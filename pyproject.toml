@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vision-as-a-service"
+version = "0.1.0"
+description = "A lightweight visual memory and attention layer for AI agents"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "VAAS contributors" }]
+dependencies = [
+  "numpy>=1.24",
+  "Pillow>=10.0",
+]
+
+[project.optional-dependencies]
+mcp = ["mcp[cli]>=1.27,<2"]
+video = ["opencv-python-headless>=4.8,<5"]
+semantic = ["open-clip-torch>=2.24", "torch>=2.1"]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+all = [
+  "mcp[cli]>=1.27,<2",
+  "opencv-python-headless>=4.8,<5",
+  "open-clip-torch>=2.24",
+  "torch>=2.1",
+]
+
+[project.scripts]
+vaas = "vaas.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vaas"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

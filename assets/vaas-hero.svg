@@ -1,0 +1,32 @@
+<svg width="1200" height="430" viewBox="0 0 1200 430" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111F"/><stop offset="1" stop-color="#111A35"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="375" y1="85" x2="827" y2="347" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#62E6C6"/><stop offset=".52" stop-color="#5CA8FF"/><stop offset="1" stop-color="#A977FF"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/><feComposite in="blur" in2="SourceGraphic" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="430" rx="28" fill="url(#bg)"/>
+  <g opacity=".18" stroke="#A7C7FF">
+    <path d="M0 72H1200M0 143H1200M0 215H1200M0 287H1200M0 358H1200"/>
+    <path d="M100 0V430M200 0V430M300 0V430M400 0V430M500 0V430M600 0V430M700 0V430M800 0V430M900 0V430M1000 0V430M1100 0V430"/>
+  </g>
+  <g filter="url(#glow)">
+    <path d="M392 112C491 31 708 28 812 112C872 160 872 260 812 310C707 398 488 397 390 310C335 261 334 160 392 112Z" stroke="url(#beam)" stroke-width="6"/>
+    <circle cx="600" cy="212" r="86" stroke="url(#beam)" stroke-width="5"/>
+    <circle cx="600" cy="212" r="31" fill="url(#beam)"/>
+  </g>
+  <g fill="#DCEBFF" font-family="ui-sans-serif, system-ui, -apple-system" text-anchor="middle">
+    <text x="600" y="84" font-weight="700" font-size="34" letter-spacing="12">VAAS</text>
+    <text x="600" y="374" font-weight="500" font-size="19" letter-spacing="4">VISION AS A SERVICE</text>
+  </g>
+  <g fill="#8FAFD7" font-family="ui-monospace, SFMono-Regular, monospace" font-size="14">
+    <text x="58" y="58">01 / SEE</text><text x="1015" y="58">02 / INDEX</text>
+    <text x="58" y="390">03 / FIND</text><text x="1007" y="390">04 / ACT</text>
+  </g>
+</svg>
+
