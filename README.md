@@ -20,6 +20,16 @@ VAAS is a compact prototype for treating vision as a **queryable data source**, 
 
 > This is portfolio-grade infrastructure: real, testable, and deliberately modular. It is not a production biometric, surveillance, or safety-critical system.
 
+## See VAAS in action
+
+<p align="center">
+  <a href="assets/vaas-demo.mp4">
+    <img src="assets/vaas-demo.gif" alt="VAAS product demonstration: visual indexing, search, attention tracking, and MCP tools" width="800" />
+  </a>
+</p>
+
+<p align="center"><sub>19-second overview · click the animation for the full-quality MP4</sub></p>
+
 ## What it demonstrates
 
 | Need | VAAS primitive | Included implementation |
@@ -223,6 +233,9 @@ VAAS uses or is designed to interoperate with these excellent projects. Their co
 pip install -e '.[dev]'
 pytest -q
 ruff check .
+
+# Regenerate the README MP4 and GIF (requires ffmpeg).
+python scripts/render_readme_demo.py
 ```
 
 The MIT license covers VAAS itself. Optional models, weights, and dependencies retain their own licenses and usage terms.
